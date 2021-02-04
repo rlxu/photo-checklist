@@ -41,9 +41,9 @@ public class DetailActivity extends AppCompatActivity {
         imageView.setImageBitmap(item.image);
 
         // Set button based on completion status
-        if (!item.isComplete) {
-            btnComplete.setText(R.string.mark_complete);
-            btnComplete.setBackgroundColor(ContextCompat.getColor(this, R.color.purple_200));
+        if (item.isComplete) {
+            btnComplete.setText(R.string.completed);
+            btnComplete.setBackgroundColor(ContextCompat.getColor(this, R.color.teal_200));
         }
         // A lambda instead of an anonymous function
         btnComplete.setOnClickListener(v -> toggleCompletionButton());
